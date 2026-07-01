@@ -1,0 +1,20 @@
+<h2>Checkout</h2>
+
+<p>Total Amount: ₹{{ total }}</p>
+
+<form action="{% url 'payment_success' %}" method="POST">
+    {% csrf_token %}
+
+    <script
+        src="https://checkout.razorpay.com/v1/checkout.js"
+        data-key="{{ razorpay_key }}"
+        data-amount="{{ payment.amount }}"
+        data-currency="INR"
+        data-order_id="{{ payment.id }}"
+        data-buttontext="Pay Now"
+        data-name="ElectroMart"
+        data-description="Purchase Payment"
+        data-theme.color="#3399cc"
+    ></script>
+
+</form>

@@ -1,0 +1,12 @@
+<h2>{{ category.name }}</h2>
+
+<div class="products">
+    {% for product in products %}
+        <div class="card">
+            <img src="{{ product.image.url }}" width="150">
+            <h3>{{ product.name }}</h3>
+            <p>₹{{ product.price }}</p>
+            <a href="{% url 'product_detail' product.id %}">View</a>
+        </div>
+    {% endfor %}
+</div>

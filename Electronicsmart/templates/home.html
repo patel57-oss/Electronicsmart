@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ElectroMart</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        .banner{
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .products{
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card{
+            width: 250px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .card img{
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .title{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- BANNER -->
+<div class="banner">
+    <h1>Welcome to ElectroMart</h1>
+    <p>Best Electronics Store</p>
+</div>
+
+<hr>
+
+<!-- PRODUCTS -->
+<h2 class="title">Featured Products</h2>
+
+<div class="products">
+    {% for product in products %}
+        <div class="card">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.category.name }}</p>
+            <h4>₹{{ product.price }}</h4>
+
+            <a href="{% url 'product_detail' product.id %}">
+                <button>View Details</button>
+            </a>
+        </div>
+    {% empty %}
+        <p>No products available</p>
+    {% endfor %}
+</div>
+
+<hr>
+
+<!-- CATEGORIES -->
+<h2 class="title">Categories</h2>
+
+<div class="products">
+
+    {% for category in categories %}
+
+    <div class="card">
+        <h3>{{ category.name }}</h3>
+
+        {% if category.slug %}
+            <a href="{% url 'category_products' category.slug %}">
+                <button>View</button>
+            </a>
+        {% else %}
+            <button disabled>View</button>
+        {% endif %}
+    </div>
+
+    {% empty %}
+        <p>No categories available</p>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

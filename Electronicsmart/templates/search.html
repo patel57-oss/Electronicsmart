@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>
+
+Search Result
+
+</h2>
+
+<div class="products">
+
+{% for product in products %}
+
+<div class="card">
+
+<img src="{{ product.image.url }}">
+
+<h3>{{ product.name }}</h3>
+
+<p>{{ product.brand }}</p>
+
+<h4>₹{{ product.price }}</h4>
+
+<a href="{% url 'product_detail' product.id %}">
+
+<button>
+
+View Details
+
+</button>
+
+</a>
+
+</div>
+
+{% empty %}
+
+<h3>
+
+No Product Found
+
+</h3>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

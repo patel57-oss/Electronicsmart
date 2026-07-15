@@ -1,0 +1,21 @@
+.hero {
+    height: 500px;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("/static/images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:bold;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
+}

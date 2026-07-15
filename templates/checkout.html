@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Checkout | Electronics Mart
+{% endblock %}
+
+{% block content %}
+
+<section class="checkout-container">
+
+    <div class="checkout-box">
+
+        <h1>🛒 Checkout</h1>
+
+        <p>Review your order before placing it.</p>
+
+        <hr>
+
+        {% if cart_items %}
+
+            {% for item in cart_items %}
+
+            <div class="checkout-item">
+
+                <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+
+                <div>
+
+                    <h3>{{ item.product.name }}</h3>
+
+                    <p>Brand : {{ item.product.brand }}</p>
+
+                    <p>Quantity : {{ item.quantity }}</p>
+
+                    <h4>₹{{ item.product.price }}</h4>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            {% endfor %}
+
+            <button class="place-order-btn">
+
+                Place Order
+
+            </button>
+
+        {% else %}
+
+            <h2>Your Cart is Empty.</h2>
+
+            <a href="{% url 'home' %}" class="continue-btn">
+
+                Continue Shopping
+
+            </a>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

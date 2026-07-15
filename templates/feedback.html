@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .feedback-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .feedback-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .feedback-header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .feedback-header p {
+        color: #666;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .feedback-form {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #999;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .submit-btn:active {
+        transform: translateY(0);
+    }
+
+    .success-message {
+        background: #d4edda;
+        color: #155724;
+        padding: 16px 20px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        border-left: 4px solid #28a745;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .success-message::before {
+        content: "✓";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .form-error {
+        color: #dc3545;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .info-box {
+        background: #f0f4ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        border-left: 4px solid #667eea;
+    }
+
+    .info-box p {
+        color: #666;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+        .feedback-container {
+            margin: 30px auto;
+            padding: 10px;
+        }
+
+        .feedback-form {
+            padding: 25px;
+        }
+
+        .feedback-header h1 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<div class="feedback-container">
+    <div class="feedback-header">
+        <h1>💬 Send Us Your Feedback</h1>
+        <p>We value your input and would love to hear from you</p>
+    </div>
+
+    {% if success %}
+    <div class="success-message">
+        {{ success }}
+    </div>
+    {% endif %}
+
+    <div class="info-box">
+        <p>📝 <strong>Please share your valuable feedback:</strong> Your suggestions, reviews, and feedback help us improve our services. Don't hesitate to share your thoughts!</p>
+    </div>
+
+    <form method="POST" class="feedback-form">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">👤 Full Name <span style="color: #dc3545;">*</span></label>
+            {{ form.name }}
+            {% if form.name.errors %}
+                <div class="form-error">{{ form.name.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">📧 Email Address <span style="color: #dc3545;">*</span></label>
+            {{ form.email }}
+            {% if form.email.errors %}
+                <div class="form-error">{{ form.email.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.mobile.id_for_label }}">📱 Mobile Number <span style="color: #dc3545;">*</span></label>
+            {{ form.mobile }}
+            {% if form.mobile.errors %}
+                <div class="form-error">{{ form.mobile.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.review.id_for_label }}">📝 Your Feedback/Review <span style="color: #dc3545;">*</span></label>
+            {{ form.review }}
+            {% if form.review.errors %}
+                <div class="form-error">{{ form.review.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="submit-btn">✉️ Submit Feedback</button>
+    </form>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <p style="color: #999; font-size: 14px;">
+            <a href="{% url 'home' %}" style="color: #667eea; text-decoration: none; font-weight: 600;">← Back to Home</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}
+

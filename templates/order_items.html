@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container" style="padding:40px;">
+
+<h2>Order #{{ order.id }}</h2>
+
+<table class="table">
+
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Qty</th>
+<th>Total</th>
+</tr>
+
+{% for item in items %}
+
+<tr>
+<td>{{ item.product }}</td>
+<td>₹{{ item.price }}</td>
+<td>{{ item.quantity }}</td>
+<td>₹{{ item.subtotal }}</td>
+</tr>
+
+{% empty %}
+
+<tr>
+<td colspan="4">No Items Found</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<h3>Total : ₹{{ total }}</h3>
+
+<a href="{% url 'orders' %}" class="btn btn-primary">
+Back
+</a>
+
+</div>
+
+{% endblock %}

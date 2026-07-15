@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <span class="hero-badge">
+            🔥 Best Deals On Electronics
+        </span>
+
+        <h1>
+            Welcome to Patel Store
+        </h1>
+
+        <p>
+            Your One-Stop Electronics Destination.
+            Buy Mobiles, Laptops, TVs, ACs,
+            Home Appliances and Accessories
+            at the Best Prices.
+        </p>
+
+        <a href="#products" class="btn btn-primary">
+            Shop Now
+        </a>
+
+        <a href="{% url 'cart' %}" class="btn btn-outline-light">
+            View Cart
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="container">
+
+    <h2 class="section-title">
+        Shop By Category
+    </h2>
+
+    <div class="categories-grid">
+
+        <div class="category-card">
+            <img src="{% static 'images/mobile.png' %}" class="category-icon">
+            <h3 class="category-name">Mobiles</h3>
+            <a href="{% url 'category_products' 'mobiles' %}" class="category-btn">
+                Explore
+            </a>
+        </div>
+
+        <div class="category-card">
+            <img src="{% static 'images/laptop.png' %}" class="category-icon">
+            <h3 class="category-name">Laptops</h3>
+            <a href="{% url 'category_products' 'laptops' %}" class="category-btn">
+                Explore
+            </a>
+        </div>
+
+        <div class="category-card">
+            <img src="{% static 'images/tv.png' %}" class="category-icon">
+            <h3 class="category-name">Smart TV</h3>
+            <a href="{% url 'category_products' 'tv' %}" class="category-btn">
+                Explore
+            </a>
+        </div>
+
+        <div class="category-card">
+            <img src="{% static 'images/ac.png' %}" class="category-icon">
+            <h3 class="category-name">Air Conditioner</h3>
+            <a href="{% url 'category_products' 'ac' %}" class="category-btn">
+                Explore
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURED PRODUCTS ================= -->
+
+<section class="container" id="products">
+
+    <h2 class="section-title">
+        Featured Products
+    </h2>
+
+    <div class="products-grid">
+
+        {% for product in products %}
+
+        <div class="product-card">
+
+            {% if product.image %}
+                <img src="{{ product.image.url }}" class="product-image">
+            {% else %}
+                <img src="{% static 'images/no-image.png' %}" class="product-image">
+            {% endif %}
+
+            <div class="product-content">
+
+                <div class="product-name">
+                    {{ product.name }}
+                </div>
+
+                <div class="product-category">
+                    {{ product.category }}
+                </div>
+
+                <div class="product-price">
+                    ₹{{ product.price }}
+                </div>
+
+                <a href="{% url 'product_detail' product.id %}" class="product-btn">
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <h3 style="text-align:center;">
+            No Products Available
+        </h3>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- ================= SPECIAL OFFER ================= -->
+
+<section class="container">
+
+    <div style="background:#0d6efd;color:white;padding:60px;border-radius:20px;text-align:center;margin:50px 0;">
+
+        <h2 style="font-size:42px;">
+            Festival Sale
+        </h2>
+
+        <p style="font-size:22px;margin:20px 0;">
+            Up To 70% OFF On Electronics
+        </p>
+
+        <a href="#products"
+           class="btn btn-outline-light">
+
+            Shop Now
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

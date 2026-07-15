@@ -1,0 +1,865 @@
+/* ===========================
+   PATEL STORE CSS
+===========================*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+}
+
+/* Header */
+
+header{
+
+background:#0d6efd;
+
+box-shadow:0 3px 12px rgba(0,0,0,.15);
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+}
+
+/* Top Header */
+
+.top-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 50px;
+
+}
+
+/* Logo */
+
+.logo-area{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo img{
+
+height:65px;
+
+width:auto;
+
+}
+
+.brand h2{
+
+color:white;
+
+font-size:30px;
+
+font-weight:700;
+
+}
+
+.brand span{
+
+color:#dfe7ff;
+
+font-size:15px;
+
+}
+
+/* Search */
+
+.search-box{
+
+display:flex;
+
+width:550px;
+
+background:white;
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+.search-box input{
+
+width:100%;
+
+padding:14px 20px;
+
+border:none;
+
+outline:none;
+
+font-size:16px;
+
+}
+
+.search-box button{
+
+width:65px;
+
+background:#ff9800;
+
+border:none;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.search-box button:hover{
+
+background:#ff7700;
+
+}
+
+/* Right Menu */
+
+.header-icons{
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+.header-icons a{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-decoration:none;
+
+color:white;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.header-icons a i{
+
+font-size:25px;
+
+margin-bottom:5px;
+
+}
+
+.header-icons a:hover{
+
+color:#ffd54f;
+
+}
+
+/* Categories */
+
+.category-nav{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+background:white;
+
+padding:15px;
+
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+}
+
+.category-nav a{
+
+text-decoration:none;
+
+padding:10px 22px;
+
+background:#eef4ff;
+
+color:#0d47a1;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.category-nav a:hover{
+
+background:#0d6efd;
+
+color:white;
+
+}
+
+.all-btn{
+
+background:#ff9800 !important;
+
+color:white !important;
+
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    text-decoration: none !important;
+    padding: 10px 22px !important;
+    background: #ff9800 !important;
+    color: white !important;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+    transition: .3s !important;
+    display: block !important;
+    cursor: pointer !important;
+}
+
+.dropdown-toggle:hover {
+    background: #e68900 !important;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 12px 0;
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-menu a {
+    color: #333;
+    padding: 12px 20px !important;
+    text-decoration: none !important;
+    display: block;
+    background: white !important;
+    border-radius: 0 !important;
+    transition: all 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0 !important;
+    color: #0d6efd !important;
+    padding-left: 25px !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-toggle {
+    background: #e68900 !important;
+}
+
+/* Feedback Button */
+.feedback-btn {
+    text-decoration: none !important;
+    padding: 10px 22px !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+}
+
+.feedback-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.5) !important;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    position: relative;
+    height: 520px;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("/static/images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items:center;
+    border-radius:20px;
+    margin:25px auto;
+    overflow:hidden;
+}
+
+.hero .container{
+    margin-left:70px;
+    color:#fff;
+    max-width:600px;
+}
+
+.hero h1{
+    font-size:58px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    margin-right:15px;
+}
+
+.btn-primary{
+    background:#0d6efd;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#0849b8;
+}
+
+.btn-outline-light{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-outline-light:hover{
+    background:white;
+    color:#0d6efd;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+    text-align:center;
+    font-size:34px;
+    margin:45px 0;
+    color:#222;
+    font-weight:700;
+}
+
+/* ===========================
+   PRODUCT GRID
+=========================== */
+
+.products-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+padding:30px;
+
+}
+
+/* ===========================
+   PRODUCT CARD
+=========================== */
+
+.product-card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+.product-image{
+width:100%;
+height:240px;
+object-fit:cover;
+
+}
+.product-content{
+padding:20px;
+}
+
+.product-name{
+font-size:20px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.product-category{
+font-size:14px;
+color:#777;
+margin-bottom:10px;
+
+}
+
+.product-price{
+font-size:24px;
+color:#0d6efd;
+font-weight:700;
+margin-bottom:18px;
+
+}
+
+.product-btn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#0d6efd;
+color:white;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+
+}
+.product-btn:hover{
+background:#0849b8;
+
+}
+
+/* ===========================
+   CATEGORY GRID
+=========================== */
+
+.categories-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.category-card{
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.category-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.category-icon{
+
+width:90px;
+
+height:90px;
+
+object-fit:contain;
+
+margin-bottom:20px;
+
+}
+
+.category-name{
+
+font-size:22px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+color:#222;
+
+}
+
+.category-btn{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:10px 22px;
+
+background:#0d6efd;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.category-btn:hover{
+
+background:#0849b8;
+
+}
+/* ===========================
+   CART BUTTON
+=========================== */
+
+.cart-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#28a745;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.cart-btn:hover{
+    background:#218838;
+}
+
+/* ===========================
+   LOGIN BUTTON
+=========================== */
+
+.login-btn{
+    display:inline-block;
+    padding:12px 24px;
+    border-radius:30px;
+    background:#0d6efd;
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#0849b8;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#0b1f3a;
+    color:#fff;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    padding:50px;
+}
+
+.footer-box h3{
+    margin-bottom:18px;
+    color:#ffd54f;
+    font-size:22px;
+}
+
+.footer-box p,
+.footer-box li{
+    color:#d6d6d6;
+    line-height:1.8;
+    list-style:none;
+}
+
+.footer-box ul{
+    padding:0;
+}
+
+.footer-box a{
+    color:#d6d6d6;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-box a:hover{
+    color:#ffffff;
+    padding-left:6px;
+}
+
+.footer hr{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.copyright{
+    text-align:center;
+    padding:18px;
+    color:#bbb;
+    font-size:15px;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.product-card,
+.category-card,
+.btn,
+.header-icons a,
+.category-nav a{
+    transition:all .3s ease;
+}
+.product-card:hover,
+.category-card:hover{
+    transform:translateY(-8px);
+}
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background:#0d6efd;
+    border-radius:20px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#0849b8;
+}
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media(max-width:992px){
+.top-header{
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+}
+.search-box{
+    width:100%;
+}
+.header-icons{
+    gap:18px;
+}
+.hero{
+    height:420px;
+}
+.hero .container{
+    margin-left:35px;
+}
+.hero h1{
+    font-size:40px;
+}
+.hero p{
+    font-size:18px;
+}
+}
+@media(max-width:768px){
+.category-nav{
+    overflow-x:auto;
+    justify-content:flex-start;
+    padding:12px;
+}
+.category-nav a{
+    white-space:nowrap;
+}
+.hero{
+    height:340px;
+    text-align:center;
+}
+.hero .container{
+    margin:auto;
+    padding:20px;
+}
+.hero h1{
+    font-size:32px;
+}
+.hero p{
+    font-size:16px;
+}
+.products-grid,
+.categories-grid{
+    grid-template-columns:1fr;
+}
+.footer-container{
+    grid-template-columns:1fr;
+    padding:30px;
+}
+}
+@media(max-width:480px){
+.brand h2{
+    font-size:22px;
+}
+.brand span{
+    font-size:13px;
+}
+.search-box input{
+    padding:12px;
+}
+.search-box button{
+    width:55px;
+}
+.header-icons{
+    gap:12px;
+}
+.header-icons a span{
+    font-size:12px;
+}
+.btn{
+    width:100%;
+    margin-bottom:10px;
+}
+}
+
+.top-logo{
+    width:100%;
+    background:#fff;
+    text-align:center;
+    padding:20px 0;
+    border-bottom:1px solid #eee;
+}
+
+.top-logo img{
+    width:420px;
+    max-width:95%;
+}
+
+.header{
+    background:#0d47a1;
+    padding:18px 0;
+}
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.search-box{
+    width:550px;
+    display:flex;
+}
+
+.search-box input{
+    height:50px;
+    border-radius:8px 0 0 8px;
+}
+
+.search-box button{
+    width:130px;
+    border-radius:0 8px 8px 0;
+}
+.header-icons a{
+    color:#fff;
+    margin-left:25px;
+    font-size:17px;
+    text-decoration:none;
+    font-weight:600;
+}
+.category-bar{
+    background:#fff;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    padding:15px 0;
+}
+
+.category-bar a{
+    margin:0 15px;
+    color:#222;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.checkout-container{
+    width:90%;
+    margin:40px auto;
+}
+
+.checkout-box{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.checkout-item{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin:20px 0;
+}
+
+.checkout-item img{
+    width:120px;
+    height:120px;
+    object-fit:contain;
+}
+
+.place-order-btn,
+.continue-btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}

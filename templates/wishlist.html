@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="checkout-container">
+
+    <div class="checkout-box">
+
+        <h2>❤️ My Wishlist</h2>
+
+        <div class="products-grid">
+
+            {% for item in items %}
+
+            <div class="product-card">
+
+                <img src="{{ item.product.image.url }}"
+                     class="product-image">
+
+                <div class="product-content">
+
+                    <h3 class="product-name">
+                        {{ item.product.name }}
+                    </h3>
+
+                    <div class="product-price">
+                        ₹{{ item.product.price }}
+                    </div>
+
+                    <a href="{% url 'product_detail' item.product.id %}"
+                       class="product-btn">
+                        View Product
+                    </a>
+
+                    <br><br>
+
+                    <a href="{% url 'remove_from_wishlist' item.id %}"
+                       class="remove-btn">
+                        Remove
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <h3>Your Wishlist is Empty ❤️</h3>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

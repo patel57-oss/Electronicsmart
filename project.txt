@@ -1,0 +1,217 @@
+Folder PATH listing for volume OS
+Volume serial number is 000000DC CC2E:34DD
+C:.
+¦   add_subcategories.py
+¦   db.sqlite3
+¦   manage.py
+¦   project.txt
+¦   UPDATES_SUMMARY.md
+¦   
++---electronicsmart
+¦   ¦   asgi.py
+¦   ¦   settings.py
+¦   ¦   urls.py
+¦   ¦   wsgi.py
+¦   ¦   __init__.py
+¦   ¦   
+¦   +---__pycache__
+¦           settings.cpython-313.pyc
+¦           settings.cpython-314.pyc
+¦           urls.cpython-313.pyc
+¦           urls.cpython-314.pyc
+¦           wsgi.cpython-313.pyc
+¦           wsgi.cpython-314.pyc
+¦           __init__.cpython-313.pyc
+¦           __init__.cpython-314.pyc
+¦           
++---media
+¦   +---category
+¦   ¦   ¦   airbastjpg.jpg
+¦   ¦   ¦   airbastjpg_wfKok6t.jpg
+¦   ¦   ¦   Air_Conditioner.jpg
+¦   ¦   ¦   Air_Conditioner_HEriYBd.jpg
+¦   ¦   ¦   bankground.jpg
+¦   ¦   ¦   blutetooth_speakers.jpg
+¦   ¦   ¦   camera.jpg
+¦   ¦   ¦   camera_IQTT848.jpg
+¦   ¦   ¦   cctv.jpg
+¦   ¦   ¦   clock.jpg
+¦   ¦   ¦   fan.jpg
+¦   ¦   ¦   headphone.jpg
+¦   ¦   ¦   iPhone_15.jpg
+¦   ¦   ¦   laptop.jpg
+¦   ¦   ¦   laptop_RMKytM6.jpg
+¦   ¦   ¦   Machine_washing.jpg
+¦   ¦   ¦   Microwave.jpg
+¦   ¦   ¦   Microwave_CJFjoi6.jpg
+¦   ¦   ¦   mobile.jpg
+¦   ¦   ¦   mobile_efAmUNt.jpg
+¦   ¦   ¦   patel-logo.png
+¦   ¦   ¦   patel-logo0.png
+¦   ¦   ¦   PC.jpg
+¦   ¦   ¦   PC_N3zVQem.jpg
+¦   ¦   ¦   PC_qqkU4uV.jpg
+¦   ¦   ¦   PC_u8iDEvD.jpg
+¦   ¦   ¦   powerbank.jpg
+¦   ¦   ¦   powerbank_QTyAFZB.jpg
+¦   ¦   ¦   printer.jpg
+¦   ¦   ¦   printer_uatQcH2.jpg
+¦   ¦   ¦   Refrigerator.jpg
+¦   ¦   ¦   Refrigerator_yzIi9rK.jpg
+¦   ¦   ¦   Samsung-Galaxy-M47.jpg
+¦   ¦   ¦   Samsung-Galaxy-M47_GiLpQKH.jpg
+¦   ¦   ¦   tabalfan.jpg
+¦   ¦   ¦   tablet.jpg
+¦   ¦   ¦   tv.jpg
+¦   ¦   ¦   tv_Jo3IQtE.jpg
+¦   ¦   ¦   woofer.jpg
+¦   ¦   ¦   
+¦   ¦   +---backgrounds
+¦   ¦           bankground.jpg
+¦   ¦           
+¦   +---products
+¦   ¦       ac.jpg
+¦   ¦       airbastjpg.jpg
+¦   ¦       Air_Conditioner.jpg
+¦   ¦       Air_Conditioner_HEriYBd.jpg
+¦   ¦       banner.jpg
+¦   ¦       blutetooth_speakers.jpg
+¦   ¦       camera.jpg
+¦   ¦       cctv.jpg
+¦   ¦       clock.jpg
+¦   ¦       fan.jpg
+¦   ¦       iPhone_15.jpg
+¦   ¦       iPhone_15_HmfRML4.jpg
+¦   ¦       Machine_washing.jpg
+¦   ¦       Microwave.jpg
+¦   ¦       PC.jpg
+¦   ¦       PC_0HJ7sWi.jpg
+¦   ¦       powerbank.jpg
+¦   ¦       printer.jpg
+¦   ¦       Refrigerator.jpg
+¦   ¦       Samsung-Galaxy-M47.jpg
+¦   ¦       Samsung-Galaxy-M47_EXgNPmy.jpg
+¦   ¦       tabalfan.jpg
+¦   ¦       tablet.jpg
+¦   ¦       tv.jpg
+¦   ¦       woofer.jpg
+¦   ¦       
+¦   +---subcategory
+¦           Samsung-Galaxy-M47.jpg
+¦           Samsung-Galaxy-M47_P0DUj89.jpg
+¦           Samsung-pc.jpg
+¦           
++---static
+¦   +---css
+¦   ¦       main.css
+¦   ¦       style.css
+¦   ¦       
+¦   +---images
+¦   ¦       ac.jpg
+¦   ¦       Air Conditioner.jpg
+¦   ¦       airbastjpg.jpg
+¦   ¦       bankground.jpg
+¦   ¦       blutetooth speakers.jpg
+¦   ¦       camera.jpg
+¦   ¦       cctv.jpg
+¦   ¦       clock.jpg
+¦   ¦       fan.jpg
+¦   ¦       headphone.jpg
+¦   ¦       iPhone 15.jpg
+¦   ¦       laptop.jpg
+¦   ¦       Machine washing.jpg
+¦   ¦       Microwave.jpg
+¦   ¦       mobile.jpg
+¦   ¦       patel-logo.png
+¦   ¦       patel-logo0.png
+¦   ¦       patel-logo1.png
+¦   ¦       patel-logo2.png
+¦   ¦       patel-logo3.png
+¦   ¦       PC.jpg
+¦   ¦       powerbank.jpg
+¦   ¦       printer.jpg
+¦   ¦       Refrigerator.jpg
+¦   ¦       Samsung-Galaxy-M47.jpg
+¦   ¦       samsung-galaxy-s25.jpg
+¦   ¦       Samsung-pc
+¦   ¦       Samsung-pc.jpg
+¦   ¦       Smart Watch.jpg
+¦   ¦       tabalfan.jpg
+¦   ¦       tablet.jpg
+¦   ¦       tv.jpg
+¦   ¦       woofer.jpg
+¦   ¦       
+¦   +---js
+¦           script.js
+¦           
++---store
+¦   ¦   admin.py
+¦   ¦   apps.py
+¦   ¦   context_processors.py
+¦   ¦   decorators.py
+¦   ¦   forms.py
+¦   ¦   models.py
+¦   ¦   tests.py
+¦   ¦   urls.py
+¦   ¦   views.py
+¦   ¦   __init__.py
+¦   ¦   
+¦   +---migrations
+¦   ¦   ¦   0001_initial.py
+¦   ¦   ¦   0002_category_slug_product_slug_cart_order_orderitem.py
+¦   ¦   ¦   0003_category_background_image_subcategory_and_more.py
+¦   ¦   ¦   0004_product_is_featured.py
+¦   ¦   ¦   0005_feedback.py
+¦   ¦   ¦   0006_contactfeedback.py
+¦   ¦   ¦   0007_order_status.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           0001_initial.cpython-314.pyc
+¦   ¦           0002_category_slug_product_slug_cart_order_orderitem.cpython-314.pyc
+¦   ¦           0003_category_background_image_subcategory_and_more.cpython-314.pyc
+¦   ¦           0004_product_is_featured.cpython-314.pyc
+¦   ¦           0005_feedback.cpython-314.pyc
+¦   ¦           0006_contactfeedback.cpython-314.pyc
+¦   ¦           0007_order_status.cpython-314.pyc
+¦   ¦           __init__.cpython-313.pyc
+¦   ¦           __init__.cpython-314.pyc
+¦   ¦           
+¦   +---__pycache__
+¦           admin.cpython-313.pyc
+¦           admin.cpython-314.pyc
+¦           apps.cpython-313.pyc
+¦           apps.cpython-314.pyc
+¦           context_processors.cpython-314.pyc
+¦           forms.cpython-314.pyc
+¦           models.cpython-313.pyc
+¦           models.cpython-314.pyc
+¦           urls.cpython-313.pyc
+¦           urls.cpython-314.pyc
+¦           views.cpython-313.pyc
+¦           views.cpython-314.pyc
+¦           __init__.cpython-313.pyc
+¦           __init__.cpython-314.pyc
+¦           
++---templates
+        404.html
+        add_product.html
+        base.html
+        browse_categories.html
+        cart.html
+        category.html
+        checkout.html
+        feedback.html
+        home.html
+        index.html
+        login.html
+        orders.html
+        order_items.html
+        Payment Ui.html
+        product_detail.html
+        profile.html
+        register.html
+        search.html
+        subcategory.html
+        Success Page.html
+        
